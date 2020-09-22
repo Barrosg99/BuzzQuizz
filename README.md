@@ -9,7 +9,7 @@
 - Layout
     - [ ]  Aplicar layout para desktop, seguindo imagens fornecidas
     - [ ]  Aplicar layout para mobile, seguindo imagens fornecidas
-    - [ ]  Fonte usada deve ser a **Roboto** nas fontes sem serifa e **Merriweather** para as fontes serifadas
+    - [X]  Fonte usada deve ser a **Roboto** nas fontes sem serifa e **Merriweather** para as fontes serifadas
 - Tela de Login
     - [ ]  Campos devem usar input `type="email"` e `type="password"`
     - [ ]  Ao clicar em entrar, caso algum dos campos esteja vazio, deverá aparecer um alert solicitando o preenchimento dos campos
