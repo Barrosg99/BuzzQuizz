@@ -1,3 +1,4 @@
+const fichaUsuario;
 function verificaLogin()
 {
     var div = document.querySelector(".telaLogin div");
@@ -25,12 +26,10 @@ function loginErrado(erro)
     var botao = document.querySelector(".telaLogin div").children[2];
     alert("Email e/ou senha incorretos");
     botao.disabled = false;
-    console.log(erro);
 }
 function tiraLogin(resposta)
 {
     main = document.querySelector(".telaLogin");
     main.style.display = "none";
-    ficha = resposta.data.token;
-    console.log(ficha);
+    fichaUsuario = resposta.data.token;
 }
