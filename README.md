@@ -12,7 +12,7 @@
     - [X]  Fonte usada deve ser a **Roboto** nas fontes sem serifa e **Merriweather** para as fontes serifadas
 - Tela de Login
     - [X]  Campos devem usar input `type="email"` e `type="password"`
-    - [ ]  Ao clicar em entrar, caso algum dos campos esteja vazio, deverá aparecer um alert solicitando o preenchimento dos campos
+    - [X]  Ao clicar em entrar, caso algum dos campos esteja vazio, deverá aparecer um alert solicitando o preenchimento dos campos
     - [ ]  Ao clicar em entrar, caso os campos estejam preenchidos, deverá ser enviado um request `post` para o servidor, seguindo documentação
     - [ ]  Caso o servidor retorne uma falha (status 401), deverá ser lançado um alert para o usuário de email/senha incorretos
     - [ ]  Caso o servidor retorne sucesso (status 200 ou 201), a tela deve sumir e a próxima tela (da listagem de quizzes) deve ser exibida
