@@ -14,10 +14,10 @@
     - [X]  Campos devem usar input `type="email"` e `type="password"`
     - [X]  Ao clicar em entrar, caso algum dos campos esteja vazio, deverá aparecer um alert solicitando o preenchimento dos campos
     - [X]  Ao clicar em entrar, caso os campos estejam preenchidos, deverá ser enviado um request `post` para o servidor, seguindo documentação
-    - [ ]  Caso o servidor retorne uma falha (status 401), deverá ser lançado um alert para o usuário de email/senha incorretos
+    - [X]  Caso o servidor retorne uma falha (status 401), deverá ser lançado um alert para o usuário de email/senha incorretos
     - [ ]  Caso o servidor retorne sucesso (status 200 ou 201), a tela deve sumir e a próxima tela (da listagem de quizzes) deve ser exibida
     - [ ]  Em caso de sucesso, o servidor retornará na resposta também um código identificador do usuário que você deve **guardar** para usar nos próximos requests pro servidor
-    - [ ]  Ao clicar em entrar, o botão deve ser desabilitado até o servidor responder, evitando que o usuário clique no botão várias vezes
+    - [X]  Ao clicar em entrar, o botão deve ser desabilitado até o servidor responder, evitando que o usuário clique no botão várias vezes
 - Lista de Quizzes
     - [ ]  Ao entrar na tela, deve ser carregado do servidor a lista de quizzes do usuário que foi autenticado
     - [ ]  Para isso, no request enviado ao servidor deve ser adicionado um **header** de nome `User-Token`, contendo o valor retornado pelo servidor no request de autenticação (que você guardou nos requisitos anteriores)

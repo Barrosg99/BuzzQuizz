@@ -17,10 +17,20 @@ function verificaLogin()
             password: inputSenha.value
         };
         var requisicao = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/users",usuario);
-        requisicao.catch(loginErrado)
+        requisicao.then(tiraLogin).catch(loginErrado);
     }
 }
-function loginErrado()
+function loginErrado(erro)
 {
+    var botao = document.querySelector(".telaLogin div").children[2];
     alert("Email e/ou senha incorretos");
+    botao.disabled = false;
+    console.log(erro);
+}
+function tiraLogin(resposta)
+{
+    main = document.querySelector(".telaLogin");
+    main.style.display = "none";
+    ficha = resposta.data.token;
+    console.log(ficha);
 }
