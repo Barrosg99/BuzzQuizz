@@ -33,20 +33,36 @@
     <main class="telaCriaQuizz">
         <header>BuzzQuizz</header>
         <input type="text" placeholder="Digite o título do seu Quizz">
-        <section>
-            <h1>Pergunta 1</h1>
-            <input type="text" placeholder="Digite a pergunta">
-            <div class="perguntas">
-                <input type="text" placeholder="Digite a resposta correta">
-                <input type="text" placeholder="Link para imagem correta">
-                <input type="text" placeholder="Digita uma resposta errada 1">
-                <input type="text" placeholder="Link para imagem errada 1">
-                <input type="text" placeholder="Digita uma resposta errada 2">
-                <input type="text" placeholder="Link para imagem errada 2">
-                <input type="text" placeholder="Digita uma resposta errada 3">
-                <input type="text" placeholder="Link para imagem errada 3">
-            </div>
-        </section>
+        <div class="questoes">
+            <section>
+                <h1>Pergunta 1</h1>
+                <input type="text" placeholder="Digite a pergunta">
+                <div class="perguntas">
+                    <input type="text" placeholder="Digite a resposta correta">
+                    <input type="text" placeholder="Link para imagem correta">
+                    <input type="text" placeholder="Digita uma resposta errada 1">
+                    <input type="text" placeholder="Link para imagem errada 1">
+                    <input type="text" placeholder="Digita uma resposta errada 2">
+                    <input type="text" placeholder="Link para imagem errada 2">
+                    <input type="text" placeholder="Digita uma resposta errada 3">
+                    <input type="text" placeholder="Link para imagem errada 3">
+                </div>
+            </section>
+        </div>
+        <button><ion-icon name="add-outline"></ion-icon></button>
+        <div class="niveis">
+            <section>
+                <h1>Nível 1</h1>
+                <div>
+                    <input type="text" placeholder="% Mínima de Acerto do nível">
+                    <input type="text" placeholder="% Máxima de Acerto do nível">
+                </div>
+                <input type="text" placeholder="Título do nível">
+                <input type="text" placeholder="Link da imagem do nível">
+                <textarea rows="6" placeholder="Descrição do nível"></textarea>
+            </section>
+        </div>
+        <button><ion-icon name="add-outline"></ion-icon></button>
     </main>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

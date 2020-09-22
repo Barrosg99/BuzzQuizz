@@ -1,6 +1,6 @@
 .telaCriaQuizz
 {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
@@ -36,7 +36,7 @@
     width: 48%;
     font-size: 16px;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .telaCriaQuizz h1
 {
@@ -44,11 +44,73 @@
     margin-bottom: 5px;
 
 }
-.telaCriaQuizz section > input
+.telaCriaQuizz .questoes section > input
 {
     margin-bottom: 5px;
     width: 100%;
     border-radius: 5px;
     font-size: 16px;
     padding: 5px;
+}
+.telaCriaQuizz button
+{
+    margin-top: 5px;
+    font-size: 35px;
+    background: #4949ea;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.questoes
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.niveis
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.niveis div > input
+{
+    width: 48%;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.niveis section > div
+{
+    text-align: center;
+}
+.niveis section > div :first-child
+{
+    margin-right: 15px;
+}
+.niveis section > input
+{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.niveis textarea
+{
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    width: 100%;
+    resize: none;
 }
