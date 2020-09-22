@@ -1,4 +1,4 @@
-const fichaUsuario;
+var fichaUsuario;
 function verificaLogin()
 {
     var div = document.querySelector(".telaLogin div");
@@ -29,7 +29,9 @@ function loginErrado(erro)
 }
 function tiraLogin(resposta)
 {
-    main = document.querySelector(".telaLogin");
-    main.style.display = "none";
+    mainLogin = document.querySelector(".telaLogin");
+    mainListaQuizz = document.querySelector(".telaListaQuizz")
+    mainLogin.style.display = "none";
+    mainListaQuizz.style.display = "flex";
     fichaUsuario = resposta.data.token;
 }
