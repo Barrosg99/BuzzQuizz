@@ -1,9 +1,9 @@
 - Geral
-    - [ ]  Todas as telas devem ser implementadas em um único arquivo HTML. Se preferir, por organização pode dividir seu JavaScript/CSS em múltiplos arquivos
-    - [ ]  Não utilize nenhuma biblioteca para implementar este projeto (jquery, lodash, etc), somente JavaScript puro (exceção: biblioteca **axios**)
+    - [X]  Todas as telas devem ser implementadas em um único arquivo HTML. Se preferir, por organização pode dividir seu JavaScript/CSS em múltiplos arquivos
+    - [X]  Não utilize nenhuma biblioteca para implementar este projeto (jquery, lodash, etc), somente JavaScript puro (exceção: biblioteca **axios**)
     - [X]  Para manipular o HTML, sugerimos utilizar o pattern de Render Function
-    - [ ]  Seu projeto deverá ser desenvolvido utilizando Git e GitHub
-    - [ ]  Para isso, comece criando um repositório público na sua conta do GitHub, inicializando com um primeiro commit contendo somente o [README.md](http://readme.md)
+    - [X]  Seu projeto deverá ser desenvolvido utilizando Git e GitHub
+    - [X]  Para isso, comece criando um repositório público na sua conta do GitHub, inicializando com um primeiro commit contendo somente o [README.md](http://readme.md)
     - [ ]  **A cada requisito implementado** faça um commit com uma mensagem descritiva do que você evoluiu. Caso queira dividir um requisito em vários commits, não há problema. Mas evite colocar mais de um requisito no mesmo commit
     - [ ]  Utilize tags semânticas onde aplicável
 - Layout
@@ -11,7 +11,7 @@
     - [ ]  Aplicar layout para mobile, seguindo imagens fornecidas
     - [X]  Fonte usada deve ser a **Roboto** nas fontes sem serifa e **Merriweather** para as fontes serifadas
 - Tela de Login
-    - [ ]  Campos devem usar input `type="email"` e `type="password"`
+    - [X]  Campos devem usar input `type="email"` e `type="password"`
     - [ ]  Ao clicar em entrar, caso algum dos campos esteja vazio, deverá aparecer um alert solicitando o preenchimento dos campos
     - [ ]  Ao clicar em entrar, caso os campos estejam preenchidos, deverá ser enviado um request `post` para o servidor, seguindo documentação
     - [ ]  Caso o servidor retorne uma falha (status 401), deverá ser lançado um alert para o usuário de email/senha incorretos
