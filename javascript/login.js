@@ -7,4 +7,13 @@ function verificaLogin()
     {
         alert("Campo Email ou Senha não preenchido");
     }
+    else
+    {
+        var usuario = 
+        {
+            email: inputEmail.value,
+            password: inputSenha.value
+        };
+        var requisicao = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/users",usuario);
+    }
 }
