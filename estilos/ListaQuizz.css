@@ -9,8 +9,8 @@ header
 {
     color: white;
     background: #2c73cc;
-    padding: 10px;
-    font-size: 20px;
+    padding: 15px;
+    font-size: 25px;
     font-weight: bold;
     width: 100%;
     position: fixed;
@@ -18,7 +18,7 @@ header
 }
 .telaListaQuizz ul
 {
-    margin-top: 40px;
+    margin-top: 55px;
     width: 58%;
     display: flex;
     justify-content: center;
@@ -31,8 +31,6 @@ header
 .telaListaQuizz ul > :first-child button
 {
     margin-top: 20px;
-    outline: none;
-    border: none;
     background: white;
     color: #2c73cc;
     padding: 0px;

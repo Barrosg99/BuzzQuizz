@@ -4,5 +4,51 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-    margin-top: 60px;
+    margin-top: 75px;
+}
+.telaCriaQuizz section
+{
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 10px;
+    background: #80d0f7;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+.telaCriaQuizz > input
+{
+    border: 1px solid #b1b1b1;
+    width: 40%;
+    border-radius: 7px;
+    font-size: 18px;
+    padding: 6px;
+}
+.perguntas
+{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.perguntas input
+{
+    margin: 5px;
+    width: 48%;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.telaCriaQuizz h1
+{
+    font-size: 20px;
+    margin-bottom: 5px;
+
+}
+.telaCriaQuizz section > input
+{
+    margin-bottom: 5px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
 }

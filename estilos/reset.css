@@ -50,3 +50,9 @@ table {
 {
     box-sizing: border-box;
 }
+input,button
+{
+	outline: none;
+	border: none;
+	font-family: inherit;
+}
