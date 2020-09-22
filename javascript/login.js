@@ -29,8 +29,8 @@ function loginErrado(erro)
 }
 function tiraLogin(resposta)
 {
-    mainLogin = document.querySelector(".telaLogin");
-    mainListaQuizz = document.querySelector(".telaListaQuizz")
+    var mainLogin = document.querySelector(".telaLogin");
+    var mainListaQuizz = document.querySelector(".telaListaQuizz");
     mainLogin.style.display = "none";
     mainListaQuizz.style.display = "flex";
     fichaUsuario = resposta.data.token;

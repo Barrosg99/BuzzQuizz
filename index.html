@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/reset.css">
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/TelaLogin.css">
+    <link rel="stylesheet" href="estilos/ListaQuizz.css">
 </head>
 <body>
     <main class="telaLogin">
@@ -24,15 +25,31 @@
         <ul>
             <li>
                 <span>Novo Quizz</span>
-                <button><ion-icon name="add-outline"></ion-icon></button>
+                <button onclick="tiraListaQuizz()"><ion-icon name="add-outline"></ion-icon></button>
             </li>
         </ul>
     </main>
     <main class="telaCriaQuizz">
-        
+        <header>BuzzQuizz</header>
+        <input type="text" placeholder="Digite o título do seu Quizz">
+        <section>
+            <h1>Pergunta 1</h1>
+            <input type="text" placeholder="Digite a pergunta">
+            <div>
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </div>
+        </section>
     </main>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="javascript/login.js"></script>
+    <script src="javascript/listaQuizz.js"></script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+body
+{
+    font-family: 'Roboto',sans-serif;
+    background-color: #FAFAFA;
+    height: 100vh;
+}
+.telaLogin
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+.telaLogin div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+    padding: 24px;
+    background: #2c73cc;
+}
+.telaLogin h1
+{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 85px;
+}
+.telaLogin h2
+{
+    margin: 5px 0px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #867c7c;
+}
+.telaLogin input
+{
+    outline: none;
+    border: none;
+    margin: 5px 0px;
+    font-size: 16px;
+    padding: 10px;
+    font-family: inherit;
+}
+.telaLogin button
+{
+    margin-top: 5px;
+    outline: none;
+    border: none;
+    background: #10229c;
+    color: white;
+    padding: 10px 35px;
+    font-size: 16px;
+    cursor: pointer;
+}
