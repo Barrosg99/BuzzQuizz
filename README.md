@@ -1,7 +1,7 @@
 - Geral
     - [ ]  Todas as telas devem ser implementadas em um único arquivo HTML. Se preferir, por organização pode dividir seu JavaScript/CSS em múltiplos arquivos
     - [ ]  Não utilize nenhuma biblioteca para implementar este projeto (jquery, lodash, etc), somente JavaScript puro (exceção: biblioteca **axios**)
-    - [ ]  Para manipular o HTML, sugerimos utilizar o pattern de Render Function
+    - [X]  Para manipular o HTML, sugerimos utilizar o pattern de Render Function
     - [ ]  Seu projeto deverá ser desenvolvido utilizando Git e GitHub
     - [ ]  Para isso, comece criando um repositório público na sua conta do GitHub, inicializando com um primeiro commit contendo somente o [README.md](http://readme.md)
     - [ ]  **A cada requisito implementado** faça um commit com uma mensagem descritiva do que você evoluiu. Caso queira dividir um requisito em vários commits, não há problema. Mas evite colocar mais de um requisito no mesmo commit
