@@ -1,6 +1,6 @@
 .telaCriaQuizz
 {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     height: 100%;
@@ -56,7 +56,7 @@
 {
     margin-top: 5px;
     font-size: 35px;
-    background: #4949ea;
+    background: #225bc2;
     color: white;
     border-radius: 50%;
     width: 35px;
@@ -69,13 +69,15 @@
 .questoes
 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 .niveis
 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 .niveis div > input

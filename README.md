@@ -29,7 +29,7 @@
     - [X]  Um quiz tem 3 tipos de informação: seu título, suas perguntas e seus níveis
     - [X]  Uma pergunta é composta por: um enunciado, 1 resposta correta e 3 respostas erradas. Cada resposta tem também uma URL para uma imagem que vai ser usada no quiz.
     - [X]  Um nível é um possível resultado do quiz, e é composto por: uma % de início e de final que corresponde àquele nível, um título, uma descrição e uma URL para a imagem que será exibida ao final
-    - [ ]  O usuário poderá adicionar quantas perguntas e níveis quanto desejar
+    - [X]  O usuário poderá adicionar quantas perguntas e níveis quanto desejar
     - [ ]  Ao publicar um quiz, o mesmo deverá ser enviado para o servidor. O request deve seguir a mesma regra de enviar um header com o token do usuário
     - [ ]  Ao publicar um quiz, o usuário deve voltar pra tela de lista de quizzes
 - Validação de Formulário
