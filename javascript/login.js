@@ -1,4 +1,4 @@
-var fichaUsuario;
+var fichaUsuario = {};
 function verificaLogin()
 {
     var div = document.querySelector(".telaLogin div");
@@ -33,5 +33,8 @@ function tiraLogin(resposta)
     var mainListaQuizz = document.querySelector(".telaListaQuizz");
     mainLogin.style.display = "none";
     mainListaQuizz.style.display = "flex";
-    fichaUsuario = resposta.data.token;
+    fichaUsuario =
+    {
+        headers: {'User-Token':resposta.data.token}
+    }
 }
