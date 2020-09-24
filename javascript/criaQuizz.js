@@ -97,9 +97,25 @@ function validaQuizz()
 {
     var inputPerg = document.querySelectorAll(".questoes input");
     var todosInput = document.querySelectorAll(".telaCriaQuizz input");
+    var inputNivel = document.querySelectorAll(".niveis input");
+    var textarea = document.querySelectorAll("textarea");
     for(var i=0;i<todosInput.length;i++)
     {
         todosInput[i].value = todosInput[i].value.trim();
+        if(todosInput[i].value==="")
+        {
+            alert("Todos os campos devem ser preenchidos");
+            return false;
+        }
+    }
+    for(var i=0;i<textarea.length;i++)
+    {
+        textarea[i].value = textarea[i].value.trim();
+        if(textarea[i].value==="")
+        {
+            alert("Todos os campos devem ser preenchidos");
+            return false;
+        }
     }  
     for(var i=0;i<inputPerg.length;i++)
     {
@@ -108,81 +124,114 @@ function validaQuizz()
             var indice = inputPerg[i].value.indexOf("?");
             if(indice!==(inputPerg[i].value.length-1)||indice === -1)
             {
-                alert('As perguntas devem ter apenas um interrogação e ele tem que está no final. Cuidado com os espaços depois do "?"');
+                alert('As perguntas devem ter apenas um interrogação e ele tem que está no final.');
+                return false;
             }
+            var letra =  inputPerg[i].value.charAt();
+            letra = letra.toUpperCase();
+            var restoFrase = inputPerg[i].value.substring(1);  
+            inputPerg[i].value = letra+restoFrase;
         }
-    }  
-}
-function publicaQuizz()
-{
-    var inputTitulo = document.querySelector(".telaCriaQuizz input");
-    var inputPerg = document.querySelectorAll(".questoes input");
-    var inputNivel = document.querySelectorAll(".niveis input");
-    var textarea = document.querySelectorAll("textarea");
-    var perguntas =
-    {
-        titulo:"",
-        respostas:[],
-        imgs:[]
-    }
-    var niveis =
-    {
-        min:0,
-        max:0,
-        titulo:"",
-        img : "",
-        descricao: ""
-    }
-    for(var i=0;i<inputPerg.length;i++)
-    {
-        if(i%9===0)
-         {perguntas.titulo = inputPerg[i].value;}
         else if(i%2!==0)
-         {perguntas.respostas.push(inputPerg[i].value)}
-        else if(i%2===0)
-         {perguntas.imgs.push(inputPerg[i].value)}
-        if((i+1)%9===0)
         {
-            info.perg.push(perguntas);
-            perguntas =
-            {
-                titulo:"",
-                respostas:[],
-                imgs:[]
-            }
+            var letra =  inputPerg[i].value.charAt();
+            letra = letra.toUpperCase();
+            var restoFrase = inputPerg[i].value.substring(1);  
+            inputPerg[i].value = letra+restoFrase;
         }
+
     }
     var j=0;
     for(var i=0;i<inputNivel.length;i++)
     {
-        if(i%4===0)
-         {niveis.min = parseFloat(inputNivel[i].value);}
-        if((i-1)%4===0)
-         {niveis.max = parseFloat(inputNivel[i].value);}
         if((i-2)%4===0)
-         {niveis.titulo = inputNivel[i].value;}
-        if((i-3)%4===0)
         {
-            niveis.img = inputNivel[i].value;
-            niveis.descricao = textarea[j].value;
+            var letra =  inputNivel[i].value.charAt();
+            letra = letra.toUpperCase();
+            var restoFrase = inputNivel[i].value.substring(1);  
+            inputNivel[i].value = letra+restoFrase;
+            letra = textarea[j].value.charAt();
+            letra = letra.toUpperCase();
+            restoFrase = textarea[j].value.substring(1);
+            textarea[j].value = letra+restoFrase;
             j++;
-            info.nivel.push(niveis);
-            niveis =
-            {
-                min:0,
-                max:0,
-                titulo:"",
-                img : "",
-                descricao: ""
-            }
-        }        
+        }
     }
-    quizz = 
+    return true;
+}
+function publicaQuizz()
+{
+    if(validaQuizz())
     {
-        "title": inputTitulo.value,
-        "data":info
-    };
-    tiraCriaQuizz();
+        var inputTitulo = document.querySelector(".telaCriaQuizz input");
+        var inputPerg = document.querySelectorAll(".questoes input");
+        var inputNivel = document.querySelectorAll(".niveis input");
+        var textarea = document.querySelectorAll("textarea");
+        var perguntas =
+        {
+            titulo:"",
+            respostas:[],
+            imgs:[]
+        }
+        var niveis =
+        {
+            min:0,
+            max:0,
+            titulo:"",
+            img : "",
+            descricao: ""
+        }
+        for(var i=0;i<inputPerg.length;i++)
+        {
+            if(i%9===0)
+            {perguntas.titulo = inputPerg[i].value;}
+            else if(i%2!==0)
+            {perguntas.respostas.push(inputPerg[i].value)}
+            else if(i%2===0)
+            {perguntas.imgs.push(inputPerg[i].value)}
+            if((i+1)%9===0)
+            {
+                info.perg.push(perguntas);
+                perguntas =
+                {
+                    titulo:"",
+                    respostas:[],
+                    imgs:[]
+                }
+            }
+        }
+        var j=0;
+        for(var i=0;i<inputNivel.length;i++)
+        {
+            if(i%4===0)
+            {niveis.min = parseFloat(inputNivel[i].value);}
+            if((i-1)%4===0)
+            {niveis.max = parseFloat(inputNivel[i].value);}
+            if((i-2)%4===0)
+            {niveis.titulo = inputNivel[i].value;}
+            if((i-3)%4===0)
+            {
+                niveis.img = inputNivel[i].value;
+                niveis.descricao = textarea[j].value;
+                j++;
+                info.nivel.push(niveis);
+                niveis =
+                {
+                    min:0,
+                    max:0,
+                    titulo:"",
+                    img : "",
+                    descricao: ""
+                }
+            }        
+        }
+        quizz = 
+        {
+            "title": inputTitulo.value,
+            "data":info
+        };
+        tiraCriaQuizz();
+    }    
 }
 function enviaQuizz()
 {

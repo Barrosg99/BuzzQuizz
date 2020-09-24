@@ -33,7 +33,7 @@
     - [ ]  Ao publicar um quiz, o mesmo deverá ser enviado para o servidor. O request deve seguir a mesma regra de enviar um header com o token do usuário
     - [X]  Ao publicar um quiz, o usuário deve voltar pra tela de lista de quizzes
 - Validação de Formulário
-    - [ ]  Antes de enviar pro servidor, usando JavaScript, garanta que o primeiro caractere do título do quiz e das perguntas/respostas esteja em maíusculo (ex: converta "título" para "Título")
+    - [X]  Antes de enviar pro servidor, usando JavaScript, garanta que o primeiro caractere do título do quiz e das perguntas/respostas esteja em maíusculo (ex: converta "título" para "Título")
 
         Dica: pesquise pelas funções `charAt`, `toUpperCase`/`toLowerCase`, `slice`/`substring`
 
