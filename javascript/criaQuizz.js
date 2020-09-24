@@ -93,6 +93,27 @@ function adicionaNivel()
     section.appendChild(textarea);  
     caixaNivel.appendChild(section);  
 }
+function validaQuizz()
+{
+    var inputPerg = document.querySelectorAll(".questoes input");
+    var vetorValida = [];
+    for(var i=0;i<inputPerg.length;i++)
+    {
+        if(i%9===0)
+        {
+            var indice = inputPerg[i].value.indexOf("?");
+            if(indice!==(inputPerg[i].value.length-1))
+            {
+                alert("As perguntas devem ter apenas um interrogação e ele tem que está no final.");
+            }
+            if(indice === -1)
+            {
+                alert("As perguntas devem ter apenas um interrogação e ele tem que está no final.");
+            }
+        }
+    }
+         
+}
 function publicaQuizz()
 {
     var inputTitulo = document.querySelector(".telaCriaQuizz input");
