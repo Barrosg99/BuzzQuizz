@@ -1,7 +1,6 @@
 var contadorPerg = 1;
 var contadorNivel = 1;
 var dados = [];
-var quizz = {};
 var info =
 {
     perg: [],
@@ -230,16 +229,16 @@ function publicaQuizz()
                 }
             }        
         }
-        quizz = 
+        var quizz = 
         {
             "title": inputTitulo.value,
             "data":info
         };
-        enviaQuizz();
-        tiraCriaQuizzServidor();
+        enviaQuizzServidor(quizz);
+        tiraCriaQuizz();
     }    
 }
-function enviaQuizzServidor()
+function enviaQuizzServidor(quizz)
 {
     var requisicao = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/quizzes",quizz,fichaUsuario);
     requisicao.catch(deuErrado).then(pegaQuizzServidor);

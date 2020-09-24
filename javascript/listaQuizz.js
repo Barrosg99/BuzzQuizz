@@ -1,4 +1,5 @@
 var Quizz = [];
+var quizzAtual;
 function pegaQuizzServidor()
 {
     var requisicao = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/quizzes",fichaUsuario);
@@ -30,6 +31,7 @@ function renderizaListaQuizz(Quizz)
         span.innerText = Quizz[i].title;
         li.appendChild(id);
         li.appendChild(span);
+        li.setAttribute("onclick","jogarQuizz(this)");
     }
     caixa.appendChild(li);
 }
@@ -39,4 +41,20 @@ function tiraListaQuizz()
     var mainCriaQuizz = document.querySelector(".telaCriaQuizz");
     mainListaQuizz.style.display = "none";
     mainCriaQuizz.style.display = "flex";
+}
+function jogarQuizz(elemento)
+{
+    var id = parseInt(elemento.children[0].innerText);
+    for(var i=0;i<Quizz.length;i++)
+    {
+        if(id===Quizz[i].id)
+        {
+            quizzAtual = Quizz[i];
+        }
+    }
+    montaQuizz();
+    var mainListaQuizz = document.querySelector(".telaListaQuizz");
+    var mainTelaQuizz = document.querySelector(".telaQuizz");
+    mainListaQuizz.style.display = "none";
+    mainTelaQuizz.style.display = "flex";
 }

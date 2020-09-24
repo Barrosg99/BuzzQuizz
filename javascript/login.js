@@ -5,17 +5,17 @@ function verificaLogin()
     inputEmail = div.children[0];
     inputSenha = div.children[1];
     botao = div.children[2];
-    if( inputEmail.value==="" || inputSenha.value==="" )
-    {
-        alert("Campo Email ou Senha não preenchido");
-    }
-    else
+    // if( inputEmail.value==="" || inputSenha.value==="" )
+    // {
+    //     alert("Campo Email ou Senha não preenchido");
+    // }
+    // else
     {
         botao.disabled = true;
         var usuario = 
         {
-            email: inputEmail.value,
-            password: inputSenha.value
+            email: "barros.fontes@unesp.br",
+            password: "dahoralek123"
         };
         var requisicao = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/users",usuario);
         requisicao.then(tiraLogin).catch(loginErrado);
