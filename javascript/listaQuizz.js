@@ -10,6 +10,7 @@ function deuErrado(erro)
 function deuCerto(resposta)
 {
     console.log(resposta);
+    console.log("deu bom");
 }
 function tiraListaQuizz()
 {

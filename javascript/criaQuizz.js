@@ -98,6 +98,7 @@ function validaQuizz()
     var inputPerg = document.querySelectorAll(".questoes input");
     var todosInput = document.querySelectorAll(".telaCriaQuizz input");
     var inputNivel = document.querySelectorAll(".niveis input");
+    var inputTitulo = document.querySelector(".telaCriaQuizz input");
     var textarea = document.querySelectorAll("textarea");
     for(var i=0;i<todosInput.length;i++)
     {
@@ -117,6 +118,10 @@ function validaQuizz()
             return false;
         }
     }  
+    var letra =  inputTitulo.value.charAt();
+    letra = letra.toUpperCase();
+    var restoFrase = inputTitulo.value.substring(1);  
+    inputTitulo.value = letra+restoFrase;
     for(var i=0;i<inputPerg.length;i++)
     {
         if(i%9===0)
@@ -230,12 +235,14 @@ function publicaQuizz()
             "title": inputTitulo.value,
             "data":info
         };
+        enviaQuizz();
         tiraCriaQuizz();
     }    
 }
 function enviaQuizz()
 {
     var requisicao = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/quizzes",quizz,fichaUsuario);
+    requisicao.catch(deuErrado).then(deuCerto);
 }
 function tiraCriaQuizz()
 {
