@@ -28,6 +28,7 @@ header
 .telaListaQuizz ul > :first-child
 {
     background: #2c73cc;
+    color: white;
 }
 .telaListaQuizz ul > :first-child button
 {
@@ -42,7 +43,8 @@ header
 }
 .telaListaQuizz li
 {
-    background: red;
+    background:white;
+    color: black;
     height: 190px;
     width: 175px;
     padding: 40px;
@@ -50,10 +52,10 @@ header
     margin-right: 15px;
     margin-top: 15px;
     text-align: center;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 }
 .telaListaQuizz span
 {
-    color: white;
     font-size: 19px;
     line-height: normal;
     font-weight: bold;

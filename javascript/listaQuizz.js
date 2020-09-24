@@ -1,16 +1,33 @@
-function carregaQuizz()
+
+function pegaQuizzServidor()
 {
     var requisicao = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/quizzes",fichaUsuario);
-    requisicao.catch(deuErrado).then(deuCerto)
+    requisicao.catch(deuErrado).then(carregaQuizz)
 }
 function deuErrado(erro)
 {
     console.log(erro);
 }
-function deuCerto(resposta)
+function carregaQuizz(resposta)
 {
-    console.log(resposta);
-    console.log("deu bom");
+    var Quizz = []
+    for(var i=0;i<resposta.data.length;i++)
+    {
+        Quizz.push(resposta.data[i])
+    }
+    renderizaListaQuizz(Quizz);
+}
+function renderizaListaQuizz(Quizz)
+{
+    var caixa = document.querySelector(".telaListaQuizz ul");
+    for(var i=0;i<Quizz.length;i++)
+    {
+        var li = document.createElement("li")
+        var span = document.createElement("span");
+        span.innerText = Quizz[i].title;
+        li.appendChild(span);
+    }
+    caixa.appendChild(li);
 }
 function tiraListaQuizz()
 {

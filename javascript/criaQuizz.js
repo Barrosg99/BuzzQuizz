@@ -236,10 +236,10 @@ function publicaQuizz()
             "data":info
         };
         enviaQuizz();
-        tiraCriaQuizz();
+        tiraCriaQuizzServidor();
     }    
 }
-function enviaQuizz()
+function enviaQuizzServidor()
 {
     var requisicao = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/quizzes",quizz,fichaUsuario);
     requisicao.catch(deuErrado).then(deuCerto);

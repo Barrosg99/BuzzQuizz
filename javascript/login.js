@@ -29,12 +29,13 @@ function loginErrado(erro)
 }
 function tiraLogin(resposta)
 {
-    var mainLogin = document.querySelector(".telaLogin");
-    var mainListaQuizz = document.querySelector(".telaListaQuizz");
-    mainLogin.style.display = "none";
-    mainListaQuizz.style.display = "flex";
     fichaUsuario =
     {
         headers: {'User-Token':resposta.data.token}
     }
+    pegaQuizzServidor();
+    var mainLogin = document.querySelector(".telaLogin");
+    var mainListaQuizz = document.querySelector(".telaListaQuizz");
+    mainLogin.style.display = "none";
+    mainListaQuizz.style.display = "flex";
 }

@@ -19,7 +19,7 @@
     - [X]  Em caso de sucesso, o servidor retornará na resposta também um código identificador do usuário que você deve **guardar** para usar nos próximos requests pro servidor
     - [X]  Ao clicar em entrar, o botão deve ser desabilitado até o servidor responder, evitando que o usuário clique no botão várias vezes
 - Lista de Quizzes
-    - [ ]  Ao entrar na tela, deve ser carregado do servidor a lista de quizzes do usuário que foi autenticado
+    - [X]  Ao entrar na tela, deve ser carregado do servidor a lista de quizzes do usuário que foi autenticado
     - [X]  Para isso, no request enviado ao servidor deve ser adicionado um **header** de nome `User-Token`, contendo o valor retornado pelo servidor no request de autenticação (que você guardou nos requisitos anteriores)
 
         Dica: pesquise por "add header axios" 
