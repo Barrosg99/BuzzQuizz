@@ -1,4 +1,4 @@
-
+var Quizz = [];
 function pegaQuizzServidor()
 {
     var requisicao = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/quizzes",fichaUsuario);
@@ -10,7 +10,7 @@ function deuErrado(erro)
 }
 function carregaQuizz(resposta)
 {
-    var Quizz = []
+    Quizz = []
     for(var i=0;i<resposta.data.length;i++)
     {
         Quizz.push(resposta.data[i])
@@ -24,7 +24,11 @@ function renderizaListaQuizz(Quizz)
     {
         var li = document.createElement("li")
         var span = document.createElement("span");
+        var id = document.createElement("span");
+        id.innerText = Quizz[i].id;
+        id.classList.add("id");
         span.innerText = Quizz[i].title;
+        li.appendChild(id);
         li.appendChild(span);
     }
     caixa.appendChild(li);

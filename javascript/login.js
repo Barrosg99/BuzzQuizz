@@ -36,6 +36,8 @@ function tiraLogin(resposta)
     pegaQuizzServidor();
     var mainLogin = document.querySelector(".telaLogin");
     var mainListaQuizz = document.querySelector(".telaListaQuizz");
+    var header = document.querySelector("header");
     mainLogin.style.display = "none";
     mainListaQuizz.style.display = "flex";
+    header.style.display = "initial";
 }

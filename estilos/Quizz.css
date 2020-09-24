@@ -1,0 +1,64 @@
+.telaQuizz
+{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.telaQuizz section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 58px;
+}
+.telaQuizz h1
+{
+    font-family: 'Merriweather';
+    font-size: 2.3rem;
+    width: 60%;
+
+}
+.telaQuizz section > div:nth-child(2)
+{
+    margin-top: 0.28rem;
+    padding: 1.5rem;
+    font-size: clamp(1rem,2.5vw,1.7rem);
+    background: #5289dc;
+    font-family: 'Merriweather';
+    text-align: center;
+    width: 60%;
+}
+.fotos
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 81%;
+}
+.fotos p
+{
+    margin-left: 1.4rem;
+    padding: 1rem;
+}
+.fotos div
+{
+    margin: 10px;
+    border: 1px solid #a0a0a0;
+    border-radius: 18px;
+}
+img
+{
+    width: 351px;
+    height: 150px;
+    border-radius: 18px;
+}
+@media (max-width: 353px)
+{
+    img
+    {
+        width: 315px;
+    }
+}
