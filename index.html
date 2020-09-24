@@ -35,13 +35,15 @@
         <header>BuzzQuizz</header>
         <input type="text" placeholder="Digite o título do seu Quizz">
         <div class="questoes"></div>
-        <button onclick="adicionaQuizz()"><ion-icon name="add-outline"></ion-icon></button>
+        <button onclick="adicionaQuizz()" class="adicionar"><ion-icon name="add-outline"></ion-icon></button>
         <div class="niveis"></div>
-        <button onclick="adicionaNivel()"><ion-icon name="add-outline"></ion-icon></button>
+        <button onclick="adicionaNivel()" class="adicionar"><ion-icon name="add-outline"></ion-icon></button>
+        <button onclick="publicaQuizz()" class="publicar">Publicar</button>
     </main>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="javascript/login.js"></script>
     <script src="javascript/listaQuizz.js"></script>
+    <script src="javascript/criaQuizz.js"></script>
 </body>
 </html>
