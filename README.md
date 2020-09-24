@@ -20,7 +20,7 @@
     - [X]  Ao clicar em entrar, o botão deve ser desabilitado até o servidor responder, evitando que o usuário clique no botão várias vezes
 - Lista de Quizzes
     - [ ]  Ao entrar na tela, deve ser carregado do servidor a lista de quizzes do usuário que foi autenticado
-    - [ ]  Para isso, no request enviado ao servidor deve ser adicionado um **header** de nome `User-Token`, contendo o valor retornado pelo servidor no request de autenticação (que você guardou nos requisitos anteriores)
+    - [X]  Para isso, no request enviado ao servidor deve ser adicionado um **header** de nome `User-Token`, contendo o valor retornado pelo servidor no request de autenticação (que você guardou nos requisitos anteriores)
 
         Dica: pesquise por "add header axios" 
 
@@ -31,17 +31,17 @@
     - [X]  Um nível é um possível resultado do quiz, e é composto por: uma % de início e de final que corresponde àquele nível, um título, uma descrição e uma URL para a imagem que será exibida ao final
     - [X]  O usuário poderá adicionar quantas perguntas e níveis quanto desejar
     - [ ]  Ao publicar um quiz, o mesmo deverá ser enviado para o servidor. O request deve seguir a mesma regra de enviar um header com o token do usuário
-    - [ ]  Ao publicar um quiz, o usuário deve voltar pra tela de lista de quizzes
+    - [X]  Ao publicar um quiz, o usuário deve voltar pra tela de lista de quizzes
 - Validação de Formulário
     - [ ]  Antes de enviar pro servidor, usando JavaScript, garanta que o primeiro caractere do título do quiz e das perguntas/respostas esteja em maíusculo (ex: converta "título" para "Título")
 
         Dica: pesquise pelas funções `charAt`, `toUpperCase`/`toLowerCase`, `slice`/`substring`
 
-    - [ ]  Antes de enviar pro servidor, usando JavaScript, remova possíveis espaços em branco que o usuário deixou no início/final dos inputs
+    - [X]  Antes de enviar pro servidor, usando JavaScript, remova possíveis espaços em branco que o usuário deixou no início/final dos inputs
 
         Dica: pesquise pela função `trim`
 
-    - [ ]  Valide que só existe 1 interrogação na pergunta e está ao final da mesma. Caso contrário, deve aparecer um alert solicitando que o usuário corrija os dados.
+    - [X]  Valide que só existe 1 interrogação na pergunta e está ao final da mesma. Caso contrário, deve aparecer um alert solicitando que o usuário corrija os dados.
 
         Dica: pesquise pelas funções `indexOf` / `lastIndexOf`
 
