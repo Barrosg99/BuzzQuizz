@@ -1,3 +1,6 @@
+var acertos=0;
+var erros=0;
+var clicou = true;
 function montaQuizz()
 {
     var main = document.querySelector(".telaQuizz");
@@ -67,14 +70,46 @@ function renderizaPergunta(opcao,titulo)
         if(opcao[i].imgCerta!==undefined)
         {
             var div = fotos.children[i];
-            div.children[0].setAttribute("src",opcao[i].imgCerta)
+            div.setAttribute("onclick","selecionaResposta(this)");
+            div.classList.add("certa");
+            div.children[0].setAttribute("src",opcao[i].imgCerta);
             div.children[1].innerText = opcao[i].respostaCerta;
         }
         else
         {
             var div = fotos.children[i];
+            div.setAttribute("onclick","selecionaResposta(this)");
+            div.classList.add("errada");
             div.children[0].setAttribute("src",opcao[i].img)
             div.children[1].innerText = opcao[i].resposta;
+        }
+    }
+}
+function selecionaResposta(elemento)
+{
+    if(clicou)
+    {
+        clicou = false;
+        var fotos = document.querySelector(".fotos");
+        acertou = elemento.classList.contains("certa");
+        if(acertou)
+        {
+            acertos++;
+        }
+        else
+        {
+            erros++;
+        }
+        for(var i=0;i<4;i++)
+        {
+            if(fotos.children[i].classList.contains("certa"))
+            {
+                fotos.children[i].style.background = "#68d668";
+            }
+            else
+            {
+                fotos.children[i].style.background = "#ec3838";
+            }
         }
     }
 }
