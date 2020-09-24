@@ -47,16 +47,16 @@
 
 - Interface do Quiz
     - [ ]  Cada pergunta do quiz deve ser exibida a cada vez
-    - [ ]  As respostas de cada pergunta devem ser exibidas organizadas aleatoriamente
-    - [ ]  Ao clicar em uma resposta, as respostas erradas devem ganhar fundo vermelho. A correta deve ganhar fundo verde.
-    - [ ]  Após 2 segundos de respondida, deve-se avançar para a próxima pergunta
+    - [X]  As respostas de cada pergunta devem ser exibidas organizadas aleatoriamente
+    - [X]  Ao clicar em uma resposta, as respostas erradas devem ganhar fundo vermelho. A correta deve ganhar fundo verde.
+    - [X]  Após 2 segundos de respondida, deve-se avançar para a próxima pergunta
 - Fim do Quiz
-    - [ ]  Ao final, deve ser exibida a quantidade de acertos no quiz
-    - [ ]  O score deve ser arredondado de forma a não ter casas decimais
+    - [X]  Ao final, deve ser exibida a quantidade de acertos no quiz
+    - [X]  O score deve ser arredondado de forma a não ter casas decimais
 
         Dica: pesquise pelas funções `Math.ceil`, `Math.floor`, `Math.round` (e utilize a que você preferir)
 
-    - [ ]  Para exibir o título/descrição/imagem do nível alcançado, você deve calcular em qual nível o usuário ficou baseado na quantidade de acertos e nos níveis configurados no quiz
+    - [X]  Para exibir o título/descrição/imagem do nível alcançado, você deve calcular em qual nível o usuário ficou baseado na quantidade de acertos e nos níveis configurados no quiz
 
 # Bônus (opcional)
 
