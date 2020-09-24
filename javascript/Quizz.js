@@ -1,6 +1,7 @@
 var acertos=0;
 var erros=0;
-var clicou = true;
+var numeroPergunta = 0;
+var clicou;
 function montaQuizz()
 {
     var main = document.querySelector(".telaQuizz");
@@ -26,11 +27,12 @@ function montaQuizz()
         div.appendChild(p);
         fotos.appendChild(div);
     }
-    montaPergunta(0);
+    montaPergunta(numeroPergunta);
 }
 function montaPergunta(indice)
 {
     var perguntas = quizzAtual.data.perg;
+    clicou = true;
     if(indice<perguntas.length)
     {
         tituloPergunta = perguntas[indice].titulo;
@@ -59,6 +61,10 @@ function montaPergunta(indice)
         opcao = opcao.sort(randomiza);
         renderizaPergunta(opcao,tituloPergunta)
     }
+    else
+    {
+        montaNiveis();
+    }
 }
 function renderizaPergunta(opcao,titulo)
 {
@@ -71,6 +77,9 @@ function renderizaPergunta(opcao,titulo)
         {
             var div = fotos.children[i];
             div.setAttribute("onclick","selecionaResposta(this)");
+            div.style.background = "";
+            div.classList.remove("certa");
+            div.classList.remove("errada");
             div.classList.add("certa");
             div.children[0].setAttribute("src",opcao[i].imgCerta);
             div.children[1].innerText = opcao[i].respostaCerta;
@@ -79,6 +88,9 @@ function renderizaPergunta(opcao,titulo)
         {
             var div = fotos.children[i];
             div.setAttribute("onclick","selecionaResposta(this)");
+            div.style.background = "";
+            div.classList.remove("certa");
+            div.classList.remove("errada");
             div.classList.add("errada");
             div.children[0].setAttribute("src",opcao[i].img)
             div.children[1].innerText = opcao[i].resposta;
@@ -111,7 +123,47 @@ function selecionaResposta(elemento)
                 fotos.children[i].style.background = "#ec3838";
             }
         }
+        setTimeout(proxPergunta,2000);
     }
+}
+function proxPergunta()
+{
+    numeroPergunta++;
+    montaPergunta(numeroPergunta);
+}
+function montaNiveis()
+{
+    var niveis = quizzAtual.data.nivel;
+    porcentagem = (acertos/(acertos+erros))*100;
+    placar = Math.round(porcentagem);
+    for(var i=0;i<niveis.length;i++)
+    {
+        if(porcentagem>=niveis[i].min&&porcentagem<=niveis[i].max)
+        {
+            renderizaNivel(niveis[i],placar)
+        }
+    }
+}
+function renderizaNivel(nivel,placar)
+{
+    var section = document.querySelector(".telaQuizz section");
+    var fotos = document.querySelector(".fotos");
+    fotos.style.display = "none";
+    section.children[1].innerText = "Você acertou "+acertos+" de "+(acertos+erros)+"!\nScore: "+placar+"%";
+    var div = document.createElement("div");
+    div.classList.add("nivel")
+    div2 = document.createElement("div")
+    var h2 = document.createElement("h2");
+    h2.innerText = nivel.titulo;
+    var p = document.createElement("p");
+    p.innerText = nivel.descricao;
+    div2.appendChild(h2);
+    div2.appendChild(p);
+    div.appendChild(div2);
+    var img = document.createElement("img");
+    img.setAttribute("src",nivel.img)
+    div.appendChild(img);
+    section.appendChild(div);
 }
 function randomiza()
 {

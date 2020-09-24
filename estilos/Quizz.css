@@ -50,11 +50,35 @@
     border-radius: 20px 20px 0px 0px;
     cursor: pointer;
 }
-img
+.fotos img
 {
     width: 351px;
     height: 150px;
     border-radius: 18px 18px 0px 0px;
+}
+.nivel
+{
+    width: 60%;
+    display: flex;
+    font-family: 'Merriweather',sans-serif;
+    margin-top: 1.8rem;
+}
+.nivel > div
+{
+    width: 50%;
+}
+.nivel h2
+{
+    font-size: 2rem;
+    color: #767676;
+}
+.nivel p
+{
+    margin-top: 0.5em;
+}
+.nivel img
+{
+    width: 50%;
 }
 @media (max-width: 353px)
 {
