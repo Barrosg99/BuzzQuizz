@@ -14,8 +14,8 @@ function verificaLogin()
         botao.disabled = true;
         var usuario = 
         {
-            email: inputEmail,
-            password: inputSenha
+            email: inputEmail.value,
+            password: inputSenha.value
         };
         var requisicao = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/users",usuario);
         requisicao.then(tiraLogin).catch(loginErrado);
