@@ -6,7 +6,7 @@ body
 }
 .telaLogin
 {
-    position: fixed;
+    position: absolute;
     right: 0;
     left: 0;
     z-index: 1;

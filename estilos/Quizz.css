@@ -1,6 +1,6 @@
 .telaQuizz
 {  
-    position: fixed;
+    position: absolute;
     right: 0;
     left: 0;
     z-index: 0;
@@ -18,7 +18,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 58px;
+    margin-top: 65px;
 }
 .telaQuizz h1
 {
@@ -79,6 +79,8 @@
 .nivel > div
 {
     width: 50%;
+    margin-right: 8px;
+    margin-bottom: 5px;
 }
 .nivel h2
 {
@@ -98,5 +100,21 @@
     img
     {
         width: 315px;
+    }
+}
+@media (max-width: 768px)
+{
+    .nivel
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nivel > div
+    {
+        width: 100%;
+    }
+    .nivel img
+    {
+        width: 100%;
     }
 }

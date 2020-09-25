@@ -95,5 +95,14 @@ function voltaPraHome()
         acertos = 0;
         erros = 0;
         numeroPergunta = 0;
+        setTimeout(resetaHTML,500);
     }
+}
+function resetaHTML()
+{
+    var mainCriaQuizz = document.querySelector(".telaCriaQuizz");
+    var mainQuizz = document.querySelector(".telaQuizz");
+    mainQuizz.innerHTML = "";
+    mainCriaQuizz.children[1].innerHTML = "";
+    mainCriaQuizz.children[3].innerHTML = "";
 }

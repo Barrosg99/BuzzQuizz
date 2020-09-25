@@ -1,6 +1,6 @@
 .telaListaQuizz
 {
-    position: fixed;
+    position: absolute;
     right: 0;
     left: 0;
     z-index: 0;
@@ -8,7 +8,6 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-    margin-bottom: 55px;
     background-color: #FAFAFA;
     transition: opacity 500ms ease-in-out;
     opacity: 0;
@@ -36,6 +35,7 @@ header
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 55px;
 }
 .telaListaQuizz .criaQuizz
 {

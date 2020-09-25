@@ -249,4 +249,5 @@ function tiraCriaQuizz()
     mainCriaQuizz.style.opacity = "0";
     mainListaQuizz.style.zIndex = "1";
     mainCriaQuizz.style.zIndex = "0";
+    setTimeout(resetaHTML,500);
 }
