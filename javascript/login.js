@@ -19,7 +19,7 @@ function verificaLogin()
             password: inputSenha.value
         };
         var requisicao = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/users",usuario);
-        requisicao.then(tiraLogin).catch(loginErrado);
+        requisicao.catch(loginErrado).then(tiraLogin);
     }
 }
 function loginErrado(erro)
@@ -38,9 +38,12 @@ function tiraLogin(resposta)
     var mainLogin = document.querySelector(".telaLogin");
     var mainListaQuizz = document.querySelector(".telaListaQuizz");
     var header = document.querySelector("header");
-    mainLogin.style.display = "none";
-    mainListaQuizz.style.display = "flex";
-    header.style.display = "initial";
+    mainLogin.style.opacity = "0";
+    mainLogin.style.zIndex = "0";
+    mainListaQuizz.style.opacity = "1";
+    mainListaQuizz.style.zIndex = "1";
+    header.style.opacity = "1";
+    header.style.zIndex = "1";
 }
 function enterLogin()
 {

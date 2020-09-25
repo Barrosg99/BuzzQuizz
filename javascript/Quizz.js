@@ -71,6 +71,7 @@ function renderizaPergunta(opcao,titulo)
 {
     var section = document.querySelector(".telaQuizz section");
     var fotos = document.querySelector(".fotos");
+    section.children[1].style.opacity = "1";
     section.children[1].innerText = titulo;
     for(var i=0;i<opcao.length;i++)
     {
@@ -84,6 +85,7 @@ function renderizaPergunta(opcao,titulo)
             div.classList.add("certa");
             div.children[0].setAttribute("src",opcao[i].imgCerta);
             div.children[1].innerText = opcao[i].respostaCerta;
+            div.style.opacity = "1";
         }
         else
         {
@@ -95,6 +97,7 @@ function renderizaPergunta(opcao,titulo)
             div.classList.add("errada");
             div.children[0].setAttribute("src",opcao[i].img)
             div.children[1].innerText = opcao[i].resposta;
+            div.style.opacity = "1";
         }
     }
 }
@@ -124,6 +127,7 @@ function selecionaResposta(elemento)
                 fotos.children[i].style.background = "#ec3838";
             }
         }
+        setTimeout(animacaoPergunta,1500);
         setTimeout(proxPergunta,2000);
     }
 }
@@ -131,6 +135,16 @@ function proxPergunta()
 {
     numeroPergunta++;
     montaPergunta(numeroPergunta);
+}
+function animacaoPergunta()
+{
+    divsRespostas = document.querySelectorAll(".fotos div");
+    divPergunta = document.querySelector(".telaQuizz section").children[1];
+    divPergunta.style.opacity = "0";
+    for(var i=0;i<divsRespostas.length;i++)
+    {
+        divsRespostas[i].style.opacity = "0";
+    }
 }
 function montaNiveis()
 {
@@ -155,6 +169,7 @@ function renderizaNivel(nivel,placar)
     var fotos = document.querySelector(".fotos");
     fotos.style.display = "none";
     section.children[1].innerText = "Você acertou "+acertos+" de "+(acertos+erros)+"!\nScore: "+placar+"%";
+    section.children[1].style.opacity = "1";
     var div = document.createElement("div");
     div.classList.add("nivel")
     div2 = document.createElement("div")
@@ -169,6 +184,8 @@ function renderizaNivel(nivel,placar)
     img.setAttribute("src",nivel.img)
     div.appendChild(img);
     section.appendChild(div);
+    var divNivel = document.querySelector(".nivel");
+    divNivel.style.opacity = "1";
 }
 function randomiza()
 {

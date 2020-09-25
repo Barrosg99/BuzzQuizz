@@ -56,8 +56,10 @@ function tiraListaQuizz()
     mainCriaQuizz.children[3].innerHTML = "";
     adicionaQuizz();
     adicionaNivel();
-    mainListaQuizz.style.display = "none";
-    mainCriaQuizz.style.display = "flex";
+    mainListaQuizz.style.opacity = "0";
+    mainListaQuizz.style.zIndex = "0";
+    mainCriaQuizz.style.opacity = "1";
+    mainCriaQuizz.style.zIndex = "1";
 }
 function jogarQuizz(elemento)
 {
@@ -72,8 +74,10 @@ function jogarQuizz(elemento)
     montaQuizz();
     var mainListaQuizz = document.querySelector(".telaListaQuizz");
     var mainTelaQuizz = document.querySelector(".telaQuizz");
-    mainListaQuizz.style.display = "none";
-    mainTelaQuizz.style.display = "flex";
+    mainListaQuizz.style.opacity = "0";
+    mainListaQuizz.style.zIndex = "0";
+    mainTelaQuizz.style.opacity = "1";
+    mainTelaQuizz.style.zIndex = "1";
 }
 function voltaPraHome()
 {
@@ -82,9 +86,12 @@ function voltaPraHome()
         var mainListaQuizz = document.querySelector(".telaListaQuizz");
         var mainCriaQuizz = document.querySelector(".telaCriaQuizz");
         var mainQuizz = document.querySelector(".telaQuizz");
-        mainListaQuizz.style.display = "flex";
-        mainCriaQuizz.style.display = "none";
-        mainQuizz.style.display = "none";
+        mainListaQuizz.style.opacity = "1";
+        mainListaQuizz.style.zIndex = "1";
+        mainCriaQuizz.style.opacity = "0";
+        mainCriaQuizz.style.zIndex = "0"
+        mainQuizz.style.opacity = "0";
+        mainQuizz.style.zIndex = "0"
         acertos = 0;
         erros = 0;
         numeroPergunta = 0;

@@ -1,14 +1,21 @@
 .telaListaQuizz
 {
-    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     margin-bottom: 55px;
+    background-color: #FAFAFA;
+    transition: opacity 500ms ease-in-out;
+    opacity: 0;
 }
 header
 {
-    display: none;
+    display: initial;
     color: white;
     background: #2c73cc;
     padding: 15px;
@@ -17,7 +24,10 @@ header
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 0;
     cursor: pointer;
+    transition: opacity 500ms ease-in-out;
+    opacity: 0;
 }
 .telaListaQuizz ul
 {

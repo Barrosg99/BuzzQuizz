@@ -245,6 +245,8 @@ function tiraCriaQuizz()
 {
     var mainListaQuizz = document.querySelector(".telaListaQuizz");
     var mainCriaQuizz = document.querySelector(".telaCriaQuizz");
-    mainListaQuizz.style.display = "flex";
-    mainCriaQuizz.style.display = "none";
+    mainListaQuizz.style.opacity = "1";
+    mainCriaQuizz.style.opacity = "0";
+    mainListaQuizz.style.zIndex = "1";
+    mainCriaQuizz.style.zIndex = "0";
 }
