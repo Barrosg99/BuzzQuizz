@@ -51,6 +51,12 @@ function tiraListaQuizz()
 {
     var mainListaQuizz = document.querySelector(".telaListaQuizz");
     var mainCriaQuizz = document.querySelector(".telaCriaQuizz");
+    contadorPerg = 1;
+    contadorNivel = 1;
+    mainCriaQuizz.children[1].innerHTML = "";
+    mainCriaQuizz.children[3].innerHTML = "";
+    adicionaQuizz();
+    adicionaNivel();
     mainListaQuizz.style.display = "none";
     mainCriaQuizz.style.display = "flex";
 }
@@ -69,4 +75,19 @@ function jogarQuizz(elemento)
     var mainTelaQuizz = document.querySelector(".telaQuizz");
     mainListaQuizz.style.display = "none";
     mainTelaQuizz.style.display = "flex";
+}
+function voltaPraHome()
+{
+    if(clicou)
+    {   
+        var mainListaQuizz = document.querySelector(".telaListaQuizz");
+        var mainCriaQuizz = document.querySelector(".telaCriaQuizz");
+        var mainQuizz = document.querySelector(".telaQuizz");
+        mainListaQuizz.style.display = "flex";
+        mainCriaQuizz.style.display = "none";
+        mainQuizz.style.display = "none";
+        acertos = 0;
+        erros = 0;
+        numeroPergunta = 0;
+    }
 }

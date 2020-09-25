@@ -1,10 +1,11 @@
 var acertos=0;
 var erros=0;
 var numeroPergunta = 0;
-var clicou;
+var clicou = true;
 function montaQuizz()
 {
     var main = document.querySelector(".telaQuizz");
+    main.innerHTML = "";
     var section = document.createElement("section");
     main.appendChild(section);
     var section = document.querySelector(".telaQuizz section");
@@ -141,8 +142,12 @@ function montaNiveis()
         if(porcentagem>=niveis[i].min&&porcentagem<=niveis[i].max)
         {
             renderizaNivel(niveis[i],placar)
+            break;
         }
     }
+    acertos = 0;
+    erros = 0;
+    numeroPergunta = 0;
 }
 function renderizaNivel(nivel,placar)
 {

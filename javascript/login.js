@@ -1,4 +1,5 @@
 var fichaUsuario = {};
+enterLogin();
 function verificaLogin()
 {
     var div = document.querySelector(".telaLogin div");
@@ -40,4 +41,19 @@ function tiraLogin(resposta)
     mainLogin.style.display = "none";
     mainListaQuizz.style.display = "flex";
     header.style.display = "initial";
+}
+function enterLogin()
+{
+    var input = document.querySelectorAll(".telaLogin input");
+    for(var i=0;i<2;i++)
+    {
+        input[i].addEventListener("keyup",function(evento)
+        {
+            if (evento.keyCode === 13)
+            {
+                evento.preventDefault();
+                document.querySelector(".telaLogin button").click();
+            }
+        });
+    }    
 }

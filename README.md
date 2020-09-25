@@ -1,3 +1,4 @@
+# Requisitos
 - Geral
     - [X]  Todas as telas devem ser implementadas em um único arquivo HTML. Se preferir, por organização pode dividir seu JavaScript/CSS em múltiplos arquivos
     - [X]  Não utilize nenhuma biblioteca para implementar este projeto (jquery, lodash, etc), somente JavaScript puro (exceção: biblioteca **axios**)

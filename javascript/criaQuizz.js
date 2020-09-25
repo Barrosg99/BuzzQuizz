@@ -6,8 +6,6 @@ var info =
     perg: [],
     nivel:[]
 };
-adicionaQuizz();
-adicionaNivel();
 function adicionaQuizz()
 {
     var caixaQuizz = document.querySelector(".questoes");
@@ -128,7 +126,7 @@ function validaQuizz()
             var indice = inputPerg[i].value.indexOf("?");
             if(indice!==(inputPerg[i].value.length-1)||indice === -1)
             {
-                alert('As perguntas devem ter apenas um interrogação e ele tem que está no final.');
+                alert('As perguntas devem ter apenas uma interrogação e ela tem que estar no final.');
                 return false;
             }
             var letra =  inputPerg[i].value.charAt();
