@@ -136,7 +136,7 @@ function validaQuizz()
             var restoFrase = inputPerg[i].value.substring(1);  
             inputPerg[i].value = letra+restoFrase;
         }
-        else if(i%2!==0)
+        else if((i-1)%9===0||(i-3)%9===0||(i-5)%9===0||(i-7)%9===0)
         {
             var letra =  inputPerg[i].value.charAt();
             letra = letra.toUpperCase();
@@ -189,9 +189,9 @@ function publicaQuizz()
         {
             if(i%9===0)
             {perguntas.titulo = inputPerg[i].value;}
-            else if(i%2!==0)
+            else if((i-1)%9===0||(i-3)%9===0||(i-5)%9===0||(i-7)%9===0)
             {perguntas.respostas.push(inputPerg[i].value)}
-            else if(i%2===0)
+            else if((i-2)%9===0||(i-4)%9===0||(i-6)%9===0||(i-8)%9===0)
             {perguntas.imgs.push(inputPerg[i].value)}
             if((i+1)%9===0)
             {

@@ -4,11 +4,11 @@
     - [X]  Para manipular o HTML, sugerimos utilizar o pattern de Render Function
     - [X]  Seu projeto deverá ser desenvolvido utilizando Git e GitHub
     - [X]  Para isso, comece criando um repositório público na sua conta do GitHub, inicializando com um primeiro commit contendo somente o [README.md](http://readme.md)
-    - [ ]  **A cada requisito implementado** faça um commit com uma mensagem descritiva do que você evoluiu. Caso queira dividir um requisito em vários commits, não há problema. Mas evite colocar mais de um requisito no mesmo commit
-    - [ ]  Utilize tags semânticas onde aplicável
+    - [X]  **A cada requisito implementado** faça um commit com uma mensagem descritiva do que você evoluiu. Caso queira dividir um requisito em vários commits, não há problema. Mas evite colocar mais de um requisito no mesmo commit
+    - [X]  Utilize tags semânticas onde aplicável
 - Layout
-    - [ ]  Aplicar layout para desktop, seguindo imagens fornecidas
-    - [ ]  Aplicar layout para mobile, seguindo imagens fornecidas
+    - [X]  Aplicar layout para desktop, seguindo imagens fornecidas
+    - [X]  Aplicar layout para mobile, seguindo imagens fornecidas
     - [X]  Fonte usada deve ser a **Roboto** nas fontes sem serifa e **Merriweather** para as fontes serifadas
 - Tela de Login
     - [X]  Campos devem usar input `type="email"` e `type="password"`
@@ -46,7 +46,7 @@
         Dica: pesquise pelas funções `indexOf` / `lastIndexOf`
 
 - Interface do Quiz
-    - [ ]  Cada pergunta do quiz deve ser exibida a cada vez
+    - [X]  Cada pergunta do quiz deve ser exibida a cada vez
     - [X]  As respostas de cada pergunta devem ser exibidas organizadas aleatoriamente
     - [X]  Ao clicar em uma resposta, as respostas erradas devem ganhar fundo vermelho. A correta deve ganhar fundo verde.
     - [X]  Após 2 segundos de respondida, deve-se avançar para a próxima pergunta

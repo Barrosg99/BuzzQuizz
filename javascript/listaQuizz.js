@@ -16,13 +16,25 @@ function carregaQuizz(resposta)
     {
         Quizz.push(resposta.data[i])
     }
-    renderizaListaQuizz(Quizz);
+    renderizaListaQuizz();
 }
-function renderizaListaQuizz(Quizz)
+function renderizaListaQuizz()
 {
     var caixa = document.querySelector(".telaListaQuizz ul");
+    caixa.innerHTML ="";
+    var li = document.createElement("li");
+    li.classList.add("criaQuizz")
+    var span = document.createElement("span");
+    var butao = document.createElement("button");
+    span.innerText = "Novo Quizz";
+    butao.setAttribute("onclick","tiraListaQuizz()");
+    butao.innerHTML = '<ion-icon name="add-outline">';
+    li.appendChild(span);
+    li.appendChild(butao);
+    caixa.appendChild(li);
     for(var i=0;i<Quizz.length;i++)
     {
+        console.log(i);
         var li = document.createElement("li")
         var span = document.createElement("span");
         var id = document.createElement("span");
@@ -32,8 +44,8 @@ function renderizaListaQuizz(Quizz)
         li.appendChild(id);
         li.appendChild(span);
         li.setAttribute("onclick","jogarQuizz(this)");
-    }
-    caixa.appendChild(li);
+        caixa.appendChild(li);
+    }    
 }
 function tiraListaQuizz()
 {
