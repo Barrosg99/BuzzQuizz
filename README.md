@@ -57,7 +57,8 @@
         Dica: pesquise pelas funções `Math.ceil`, `Math.floor`, `Math.round` (e utilize a que você preferir)
 
     - [X]  Para exibir o título/descrição/imagem do nível alcançado, você deve calcular em qual nível o usuário ficou baseado na quantidade de acertos e nos níveis configurados no quiz
-
+- Deploy
+    - [X]  Pesquise como utilizar o GitHub Pages e coloque seu site online :)
 # Bônus (opcional)
 
 - Apagar quiz
