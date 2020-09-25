@@ -34,7 +34,6 @@ function renderizaListaQuizz()
     caixa.appendChild(li);
     for(var i=0;i<Quizz.length;i++)
     {
-        console.log(i);
         var li = document.createElement("li")
         var span = document.createElement("span");
         var id = document.createElement("span");
